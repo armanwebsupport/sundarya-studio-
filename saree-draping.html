@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saree Draping | Sundarya Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Mukta:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold: #C9A227;
+    --gold-light: #E8C766;
+    --blue: #1B3A5C;
+    --blue-light: #EAF2F8;
+    --white: #FFFFFF;
+    --ink: #222222;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:'Mukta', sans-serif;
+    background:var(--white);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  h1, h2, h3, .salon-name{ font-family:'Cormorant Garamond', serif; }
+  a{ text-decoration:none; color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  header{
+    background:var(--white);
+    padding:20px 6% 0;
+    text-align:center;
+    border-bottom:3px solid var(--gold);
+  }
+  .salon-name{
+    font-size:clamp(2rem, 5vw, 3.2rem);
+    font-weight:600;
+    color:var(--blue);
+    letter-spacing:1px;
+    padding-bottom:14px;
+  }
+  nav{ background:var(--blue); }
+  nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:16px 0;
+  }
+  nav a{
+    color:var(--white);
+    font-size:0.95rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:color .3s;
+  }
+  nav a:hover, nav a:focus-visible{ color:var(--gold-light); }
+
+  .page-hero{
+    padding:70px 6% 50px;
+    text-align:center;
+    background:var(--blue-light);
+  }
+  .breadcrumb{
+    font-size:0.85rem;
+    color:var(--blue);
+    margin-bottom:16px;
+  }
+  .breadcrumb a{ color:var(--gold); text-decoration:underline; }
+  .page-hero h1{
+    font-size:clamp(2rem, 4.5vw, 3rem);
+    color:var(--blue);
+    margin-bottom:14px;
+  }
+  .page-hero p{
+    max-width:600px;
+    margin:0 auto;
+    color:#4a4a4a;
+  }
+
+  .pricing{
+    padding:80px 6%;
+    max-width:1000px;
+    margin:0 auto;
+  }
+  .pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:24px;
+  }
+  .price-card{
+    border:1px solid #dde5ec;
+    border-radius:8px;
+    padding:32px 26px;
+    text-align:center;
+    position:relative;
+    transition:transform .3s, box-shadow .3s;
+  }
+  .price-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 28px rgba(27,58,92,0.12);
+  }
+  .price-card.featured{
+    border:2px solid var(--gold);
+  }
+  .badge{
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--gold);
+    color:var(--white);
+    font-size:0.75rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:5px 14px;
+    border-radius:20px;
+  }
+  .price-card h3{
+    color:var(--blue);
+    font-size:1.3rem;
+    margin:10px 0 6px;
+  }
+  .price-card .price{
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.2rem;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:16px;
+  }
+  .price-card .price span{
+    font-size:0.9rem;
+    color:#888;
+    font-family:'Mukta', sans-serif;
+  }
+  .price-card ul{
+    list-style:none;
+    text-align:left;
+    margin-bottom:24px;
+  }
+  .price-card ul li{
+    padding:6px 0;
+    color:#4a4a4a;
+    font-size:0.92rem;
+    border-bottom:1px solid #f0f0f0;
+  }
+  .btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:var(--gold);
+    color:var(--white);
+    font-size:0.85rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border-radius:3px;
+    transition:background .3s;
+  }
+  .btn:hover, .btn:focus-visible{ background:var(--blue); }
+
+  .back-link{
+    display:block;
+    text-align:center;
+    padding:0 6% 60px;
+    color:var(--blue);
+    text-decoration:underline;
+  }
+
+  footer{
+    background:var(--blue);
+    color:var(--white);
+    text-align:center;
+    padding:30px 6%;
+    font-size:0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="salon-name">Sundarya Studio</div>
+  <nav>
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Saree Draping</div>
+  <h1>Saree Draping</h1>
+  <p>Regional draping styles — Bengali, Gujarati, Maharashtrian and more — draped perfectly for photos and comfort.</p>
+</section>
+
+<section class="pricing">
+  <div class="pricing-grid">
+    <div class="price-card">
+      <h3>Classic Drape</h3>
+      <div class="price">₹500 <span>onwards</span></div>
+      <ul>
+        <li>Standard Nivi-style draping</li>
+        <li>Pleats &amp; pallu setting</li>
+        <li>Suitable for guests &amp; small functions</li>
+        <li>15-20 min service</li>
+      </ul>
+      <a href="index.html#contact" class="btn">Enquire Now</a>
+    </div>
+
+    <div class="price-card featured">
+      <span class="badge">Most Booked</span>
+      <h3>Regional Bridal Drape</h3>
+      <div class="price">₹1,500 <span>onwards</span></div>
+      <ul>
+        <li>Bengali, Gujarati or Maharashtrian style</li>
+        <li>Pin &amp; jewellery-safe draping</li>
+        <li>Photo-ready pallu arrangement</li>
+        <li>30-40 min service</li>
+      </ul>
+      <a href="index.html#contact" class="btn">Enquire Now</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Premium Bridal Drape + Touch-up</h3>
+      <div class="price">₹2,500 <span>onwards</span></div>
+      <ul>
+        <li>Fully custom regional draping style</li>
+        <li>On-site touch-ups through the event</li>
+        <li>Decorative pinning &amp; embellishments</li>
+        <li>Available for full event day</li>
+      </ul>
+      <a href="index.html#contact" class="btn">Enquire Now</a>
+    </div>
+  </div>
+</section>
+
+<a href="index.html#services" class="back-link">&larr; Back to All Services</a>
+
+<footer>
+  <p>&copy; 2026 Sundarya Studio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
