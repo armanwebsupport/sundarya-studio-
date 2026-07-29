@@ -132,3 +132,42 @@ nav a:hover, nav a:focus-visible{
 .btn:hover, .btn:focus-visible{
   background:var(--blue);
 }
+<section class="about" id="about">
+  <div class="about-text">
+    <h2>Our Story</h2>
+    <p>Sundarya Studio was founded to give brides an unhurried, personal experience — every look is planned in advance and refined until it feels like you, only more radiant.</p>
+    <p>Our artists train in both classical Indian bridal technique and modern skincare-first makeup, so every result photographs beautifully and feels comfortable to wear all day.</p>
+  </div>
+  <img src="images/about.jpg" alt="Sundarya Studio interior">
+</section>
+.about{
+  padding:90px 6%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.about-text h2{
+  font-size:clamp(1.8rem, 3.5vw, 2.4rem);
+  color:var(--blue);
+  margin-bottom:18px;
+}
+
+.about-text p{
+  color:#4a4a4a;
+  margin-bottom:14px;
+}
+
+.about img{
+  border-radius:4px;
+  border:3px solid var(--gold-light);
+}
+
+@media (max-width:800px){
+  .about{
+    grid-template-columns:1fr;
+  }
+}
