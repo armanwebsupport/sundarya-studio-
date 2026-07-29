@@ -12,3 +12,123 @@
     </ul>
   </nav>
 </header>
+<style>
+  :root{
+    --gold: #C9A227;
+    --gold-light: #E8C766;
+    --blue: #1B3A5C;
+    --blue-light: #EAF2F8;
+    --white: #FFFFFF;
+    --ink: #222222;
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  html{
+    scroll-behavior:smooth;
+  }
+  body{
+    font-family:'Mukta', sans-serif;
+    background:var(--white);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  h1, h2, h3, .salon-name{
+    font-family:'Cormorant Garamond', serif;
+  }
+  a{
+    text-decoration:none;
+    color:inherit;
+  }
+  img{
+    max-width:100%;
+    display:block;
+  }
+    </style>
+    header{
+  background:var(--white);
+  padding:20px 6% 0;
+  text-align:center;
+  border-bottom:3px solid var(--gold);
+}
+
+.salon-name{
+  font-size:clamp(2rem, 5vw, 3.2rem);
+  font-weight:600;
+  color:var(--blue);
+  letter-spacing:1px;
+  padding-bottom:14px;
+}
+
+nav{
+  background:var(--blue);
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:16px 0;
+}
+
+nav a{
+  color:var(--white);
+  font-size:0.95rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:color .3s;
+}
+
+nav a:hover, nav a:focus-visible{
+  color:var(--gold-light);
+}
+  <section class="hero" id="home">
+  <h1>Where Every Bride Finds Her True Glow</h1>
+  <p>Bridal makeup, hair styling &amp; mehendi artistry — crafted with care for your most special day.</p>
+  <a href="#contact" class="btn">Book a Consultation</a>
+  </section>
+  .hero{
+  min-height:70vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 6%;
+  background:
+    linear-gradient(180deg, var(--blue-light) 0%, var(--white) 100%);
+}
+
+.hero h1{
+  font-size:clamp(2rem, 5vw, 3.4rem);
+  color:var(--blue);
+  font-weight:600;
+  max-width:800px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:520px;
+  color:#4a4a4a;
+  font-size:1.05rem;
+  margin-bottom:32px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  background:var(--gold);
+  color:var(--white);
+  font-size:0.9rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  border-radius:3px;
+  transition:background .3s;
+}
+
+.btn:hover, .btn:focus-visible{
+  background:var(--blue);
+}
