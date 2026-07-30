@@ -556,29 +556,39 @@
     width:42px;
     height:42px;
     border-radius:50%;
-    background:var(--white);
-    box-shadow:0 4px 14px rgba(15,42,71,0.18);
     display:flex;
     align-items:center;
     justify-content:center;
-    transition:transform .3s, background .3s;
-  }
+    box-shadow:0 4px 14px rgba(15,42,71,0.25);
+    transition:transform .3s, filter .3s;
+}
 
-  .social-bar a svg{
+.social-bar a svg{
     width:20px;
     height:20px;
-    fill:var(--blue);
-    transition:fill .3s;
-  }
-
-  .social-bar a:hover{
-    transform:translateX(-4px) scale(1.08);
-    background:var(--gold);
-  }
-
-  .social-bar a:hover svg{
     fill:var(--white);
-  }
+}
+
+.social-bar a:hover{
+    transform:translateX(-4px) scale(1.08);
+    filter:brightness(1.1);
+}
+
+.social-bar .ig{
+    background:radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-bar .fb{
+    background:#1877F2;
+}
+
+.social-bar .yt{
+    background:#FF0000;
+}
+
+.social-bar .wa{
+    background:#25D366;
+}
 
   @media (max-width:700px){
     .social-bar{
