@@ -478,67 +478,45 @@
     *{ transition:none !important; scroll-behavior:auto !important; }
   }
 
-  /* ---------- Preloader ---------- */
-  #preloader{
-    position:fixed;
-    inset:0;
-    z-index:999;
-    background:var(--blue-deep);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    transition:opacity .6s ease, visibility .6s ease;
-  }
+  <!-- ============ PRELOADER HTML — paste right after <body> tag ============ -->
+<div id="mo-preloader">
 
-  #preloader.hidden{
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-  }
+  <!-- Stage 01 — DEFINE -->
+  <div class="mo-stage mo-stage-1">
+    <span class="mo-num">01</span>
+    <span class="mo-label">DEFINE</span>
+    <span class="mo-line"></span>
+    <span class="mo-dot mo-dot-a"></span>
+    <span class="mo-dot mo-dot-b"></span>
+  </div>
 
-  .preloader-motif{
-    width:64px;
-    height:64px;
-    margin-bottom:22px;
-    animation:rotateGlow 2.2s linear infinite;
-  }
+  <!-- Stage 02 — REFINE -->
+  <div class="mo-stage mo-stage-2">
+    <span class="mo-num">02</span>
+    <span class="mo-label">REFINE</span>
+    <span class="mo-focus-frame"></span>
+  </div>
 
-  @keyframes rotateGlow{
-    0%{ transform:rotate(0deg); opacity:0.6; }
-    50%{ opacity:1; }
-    100%{ transform:rotate(360deg); opacity:0.6; }
-  }
+  <!-- Stage 03 — ENHANCE -->
+  <div class="mo-stage mo-stage-3">
+    <span class="mo-num">03</span>
+    <span class="mo-label">ENHANCE</span>
+    <div class="mo-glimpses">
+      <span class="mo-glimpse mo-glimpse-hero"></span>
+      <span class="mo-glimpse mo-glimpse-type">Aa</span>
+      <span class="mo-glimpse mo-glimpse-card"></span>
+      <span class="mo-glimpse mo-glimpse-brand"></span>
+    </div>
+  </div>
 
-  .preloader-name{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.6rem;
-    letter-spacing:4px;
-    color:var(--white);
-    text-transform:uppercase;
-  }
+  <!-- Stage 04 — REVEAL -->
+  <div class="mo-stage mo-stage-4">
+    <span class="mo-num">04</span>
+    <span class="mo-label mo-label-reveal">REVEAL</span>
+    <span class="mo-tagline">MAKE YOUR MOMENT.</span>
+  </div>
 
-  .preloader-name span{
-    color:var(--gold-light);
-  }
-
-  .preloader-line{
-    width:0;
-    height:1px;
-    background:var(--gold);
-    margin-top:16px;
-    animation:growLine 1.8s ease-in-out infinite;
-  }
-
-  @keyframes growLine{
-    0%{ width:0; }
-    50%{ width:140px; }
-    100%{ width:0; }
-  }
-
-  body.loading{
-    overflow:hidden;
-  }
+</div>
 
   /* ---------- Social Bar ---------- */
   .social-bar{
